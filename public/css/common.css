@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    color: #333;
+    font:normal normal normal 14px "PingFang SC","Segoe UI",Helvetica,Arial,sans-serif;
+}
+a:link,a:visited,a:hover,a:active {
+    text-decoration: none;
+    outline: none;
+    color: #333;
+}
+img{
+    border: 0;
+    outline: none;
+}
+li{
+    list-style: none;
+}
+.text_left{
+    text-align: left;
+}
+.text_right{
+    text-align: right;
+}
+.text_center{
+    text-align: center;
+}

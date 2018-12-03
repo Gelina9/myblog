@@ -1,0 +1,29 @@
+#main_manage{
+    width: 1190px;
+    margin: 0 auto;
+    padding: 110px 0 100px 0;
+    font-size: 0;
+}
+#main_manage>div{
+    display: inline-block;
+    vertical-align: top;
+    font-size: 14px;
+}
+#main_manage .slider_left{
+    width: 99px;
+    height: 542px;
+    border-right: 1px solid rgba(249,249,249,1);
+}
+#main_manage .slider_left li{
+    margin-bottom: 39px;
+}
+#main_manage .slider_left li>a{
+    color: #999;
+}
+#main_manage .slider_left li>a:hover{
+    color: #333;
+}
+#main_manage .slider_right{
+    width: 890px;
+    padding-left: 50px;
+}

@@ -1,0 +1,51 @@
+{%extends 'layout.html'%} {%block content%} 
+{% for content in contents%}
+<link rel="stylesheet" href="../../public/css/index.css">
+<div class="listBox">
+    <div class="title_box">
+        <h1>{{content.title}}</h1>
+        <div>
+            <span>阅读({{content.views}})</span>
+            <span>评论({{content.comments.length}})</span>
+        </div>
+    </div>
+    <p class="author">
+        {{content.user.username}} | {{content.addTime|date('Y/m/d H:i:s',-8*60)}}
+    </p>
+    <div class="description">
+        <p>{{content.description}}</p>
+    </div>
+    <div class="article">
+        <p>{{content.content}}</p>
+    </div>
+    <div class="readall">
+        <a href="/view?contentid={{content.id}}">阅读全文</a>
+    </div>
+</div>
+{%endfor%}
+<div class="paper">
+    <ul class="clear">
+        <li class="prev">
+            {%if page
+            <=1%} <span>没有上一页了</span>
+                {%else%}
+                <a href="/?category={{category}}&page={{page-1}}">上一页</a>
+                {%endif%}
+        </li>
+        <li class="cur_page">
+            {%if pages>0 %}
+            <strong>{{page}} / {{pages}}</strong>
+            {%else%}
+            <strong>当前分类下没有内容</strong>
+            {%endif%}
+        </li>
+        <li class="next">
+            {%if page>=pages%}
+            <span>没有下一页了</span>
+            {%else%}
+            <a href="/?category={{category}}&page={{page+1}}">下一页</a>
+            {%endif%}
+        </li>
+    </ul>
+</div>
+{%endblock%}

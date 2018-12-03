@@ -1,0 +1,68 @@
+/* 主体内容 */
+#content{
+    margin-top: 35px;
+    font-size: 0;
+    min-height: 600px;
+}
+#content_left{
+    font-size: 14px;
+    padding-left: 38px;
+    margin-right: 50px;
+    width: 793px;
+    display: inline-block;
+    vertical-align: top;
+}
+#content_left .listBox {
+    padding-bottom: 31px;
+    border-bottom: 1px solid #e4e4e4;
+}
+#content_left .listBox h1{
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 56px;
+}
+.author_info{
+    font-size: 14px;
+    color: #999;
+}
+dfn{
+    font-style: normal;
+    font-size: 18px;
+    height: 208px;
+    overflow: hidden;
+}
+.login-msg,
+.no_msg{
+    margin-top: 10px;
+}
+.login-msg{
+    color: #d00;
+}
+#content_left .comment_page{
+    margin: 20px 0;
+    font-size: 0;
+    text-align: justify;
+    text-align-last: justify;
+}
+#content_left .comment_page>li{
+    list-style: none;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 14px;
+}
+.comment-list{
+    margin-top: 10px;
+}
+.comment-list p{
+    margin: 10px 0;
+    padding: 10px;
+    background: rgb(249,249,249);
+}
+#content_right{
+    display: inline-block;
+    vertical-align: top;
+    font-size: 14px;
+    background: #ccc;
+    width: 390px;
+    height: 768px;
+}

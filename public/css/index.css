@@ -1,0 +1,99 @@
+/* 主体内容 */
+#content{
+    margin-top: 35px;
+    margin-bottom: 35px;
+    font-size: 0;
+    min-height: 600px;
+    background: rgb(249, 249, 249);
+}
+#content_left{
+    font-size: 14px;
+    padding-left: 38px;
+    padding-right: 50px;
+    margin-right: 50px;
+    width: 843px;
+    display: inline-block;
+    vertical-align: top;
+    background: #fff;
+}
+#content_left .listBox h1{
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 56px;
+}
+#content_left .title_box{
+    position: relative;
+}
+#content_left .title_box div{
+    position: absolute;
+    right: 0;
+    bottom: 12px;
+}
+#content_left .title_box div>span{
+    font-size: 14px;
+    color: #999;
+    margin-right: 20px;
+}
+#content_left .title_box div>span:last-child{
+    margin-right: 0;
+}
+#content_left .listBox {
+    padding-bottom: 31px;
+    border-bottom: 1px solid #e4e4e4;
+}
+#content_left .listBox .author{
+    font-size: 14px;
+    color: #999;
+}
+#content_left .listBox .description{
+    width: 556px;
+    padding: 20px 30px 10px 30px;
+    background: rgb(249,249,249);
+    margin-bottom: 30px;
+}
+#content_left .listBox .description p{
+    max-height: 63px;
+    font-size: 14px;
+    color: #999;
+    line-height: 21px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+#content_left .listBox .article{
+    font-size: 18px;
+    max-height: 208px;
+    overflow: hidden;
+}
+#content_left .listBox .readall a{
+    margin-top: 20px;
+    display: block;
+    width: 109px;
+    height: 40px;
+    line-height: 40px;
+    background: #333;
+    text-align: center;
+    color: #fff;
+}
+#content_left .paper{
+    margin: 30px 0 0 0;
+}
+#content_left .paper ul{
+    font-size: 0;
+    text-align: justify;
+    text-align-last: justify;
+}
+#content_left .paper ul>li{
+    list-style: none;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 14px;
+}
+#content_right{
+    display: inline-block;
+    vertical-align: top;
+    font-size: 14px;
+    width: 390px;
+}

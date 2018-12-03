@@ -1,0 +1,38 @@
+{% extends 'headFoot.html' %}
+{% block manage%}
+<link rel="stylesheet" href="/public/css/adminindex.css" />
+<div id="banner">
+        <div>
+            <h1>Hello, {{userInfo.username}}!</h1>
+            <p>欢迎光临我的博客后台管理！</p>
+        </div>
+    </div>
+    <div class="manage_box">
+        <ul>
+            <li>
+                <a href="/admin/content/add">
+                    <img src="../../public/imgs/icon_addblog.png">
+                    <p>添加博文</p>
+                </a>
+            </li>
+            <li>
+                <a href="/admin/content">
+                    <img src="../../public/imgs/icon_blogmanage.png">
+                    <p>博文管理</p>
+                </a>
+            </li>
+            <li>
+                <a href="/admin/category">
+                    <img src="../../public/imgs/icon_tabmanage.png">
+                    <p>分类管理</p>
+                </a>
+            </li>
+            <li>
+                <a href="/admin/user">
+                    <img src="../../public/imgs/icon_usermanage.png">
+                    <p>用户管理</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+{%endblock%}

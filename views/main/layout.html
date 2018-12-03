@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Blog</title>
+    <link rel="stylesheet" href="/public/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/public/css/common.css" />
+    <link rel="stylesheet" href="/public/css/main.css" />
+    <script src="/public/js/jquery.min.js"></script>
+  </head>
+  <body>
+    <div id="homepage">
+      <!-- 导航栏 -->
+      <nav id="nav_bar">
+        <div class="nav_bar">
+            <div id="logo">
+                <a href="/"><img src="../../public/imgs/LOGO.png"/></a>
+              </div>
+              <div id="nav_blog">
+                <a href="javascript:;">博文</a>
+                <img src="../../public/imgs/arrow_down.png">
+                <ul>
+                  {%for cate in categories%}
+                  <li>
+                    {%if category ==cate.id%}
+                    <a href="/?category={{cate.id}}" class="focus">{{ cate.name }}</a>
+                    {%else%}
+                    <a href="/?category={{cate.id}}">{{ cate.name }}</a> {%endif%}
+                  </li>
+                  {%endfor%}
+                </ul>
+              </div>
+              <div id="nav_about">
+                <a href="#">关于</a>
+              </div>
+              <div id="nav_contact">
+                <a href="#">联系方式</a>
+              </div>
+              <div id="nav_login">
+                  {% if userInfo._id%}
+                  <div class="user_info">
+                      {% if userInfo.isAdmin %}
+                      <h4 class="admin_name">{{ userInfo.username }}<img src="../../public/imgs/arrow_down.png"></h4>
+                      <div class="drop">
+                          <p><a href="/admin" target="_blank">进入管理</a></p>
+                          <p><a class="logout" href="javascript:;">退出</a></p>
+                      </div>
+                      {% else %}
+                      <h4>
+                        欢迎您<span>{{ userInfo.username }}!</span><a class="logout" href="javascript:;">退出</a>
+                      </h4>
+                      {% endif%}
+                    </div>
+                  {% else %}
+                  <a href="javascript:;" class="nav_login">登录 / 注册</a>
+                  {% endif %}
+              </div>
+        </div>
+      </nav>
+      <div id="banner"></div>
+      <!-- 主体内容 -->
+      <div class="container-fluid" id="content">
+        <div class="row">
+          <!-- 左侧 -->
+          <div id="content_left">{%block content%}{%endblock%}</div>
+          <!-- 右侧 -->
+          <div id="content_right">
+          </div>
+        </div>
+        <!-- 右侧 -->
+      </div>
+      <!-- 底部 -->
+      <div id="footer">
+          致力于为广大爱好学习者提供优质的文档支持！
+      </div>
+      <!-- 弹窗begin -->
+      <div id="dialog">
+        <div id="dialog_bg">
+          <div id="dialog_panel">
+            <div id="dialog_info">
+                {% if userInfo._id%}
+                <!-- <div class="user_info">
+                  {% if userInfo.isAdmin %}
+                  <h4>{{ userInfo.username }}<a href="/admin">进入管理</a></h4>
+                  {% else %}
+                  <h4>
+                    欢迎您<span>{{ userInfo.username }}</span
+                    >!
+                  </h4>
+                  {% endif%}
+                  <p class="center"><a href="#">退出</a></p>
+                </div> -->
+                {% else %}
+                <div class="sign_box">
+                  <form action="#" method="post">
+                    <div class="username_box">
+                      <label>用户名</label> <input type="text" name="username" onclick="this.select()"/>
+                    </div>
+                    <div class="password_box">
+                      <label>密码</label> <input type="password" name="password" />
+                    </div>
+                    <div class="repassword_box">
+                      <label>确认密码</label>
+                      <input type="password" name="repassword" />
+                    </div>
+                  </form>
+                  <p class="error text_center"></p>
+                  <div class="text_center">
+                    <button class="btn btn-info">注册</button>
+                  </div>
+                  <p class="text_center tologin">已有账号<a href="#">立即登录</a></p>
+                </div>
+    
+                <div class="login_box">
+                  <form action="#" method="post">
+                    <div class="username_box">
+                      <label>用户名</label> <input type="text" name="username" placeholder="请输入用户名" onclick="this.select()"/>
+                    </div>
+                    <div class="password_box">
+                      <label>密码</label> <input type="password" name="password" placeholder="请输入密码"/>
+                    </div>
+                  </form>
+                  <p class="error text_center"></p>
+                  <div class="text_center">
+                    <button class="btn btn-info">登录</button>
+                  </div>
+                  <p class="text_center tosign">还没有账号？<a href="#">立即注册</a></p>
+                </div>
+                {% endif %}
+            </div>
+            <div class="closeDia"></div>
+          </div>
+        </div>
+      </div>
+      <!-- 弹窗end -->
+    </div>
+    <script src="/public/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/public/js/index.js"></script>
+  </body>
+</html>

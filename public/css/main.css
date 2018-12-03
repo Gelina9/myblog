@@ -1,0 +1,204 @@
+#homepage{
+    width: 1280px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+#homepage::-webkit-scrollbar {
+    display: none;
+}
+/* 顶部导航 */
+#nav_bar{
+    width: 100%;
+    height: 70px;
+    line-height: 70px;
+    background: rgba(0, 0, 0, .8);
+    color: #fff;
+    font-size: 0;
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 9;
+}
+#nav_bar .nav_bar{
+    position: relative;
+    width: 1280px;
+    height: 70px;
+    padding: 0 45px;
+    margin: 0 auto;
+}
+#nav_bar>div>div{
+    display: inline-block;
+    height: 70px;
+    vertical-align: middle;
+}
+#nav_bar>div>div a{
+    color: rgba(255,255,255,.7);
+}
+#nav_bar>div>div a:hover{
+    color: #fff;
+}
+#nav_bar>div>div a:highlight{
+    color: #fff;
+    font-weight: 500;
+}
+#logo{
+    width: 44px;
+    height: 44px;
+    margin-right: 56px;
+}
+#nav_blog{
+    font-size: 14px;
+    margin-right: 80px;
+    cursor: pointer;
+    position: relative;
+}
+#nav_blog img{
+    display: inline-block;
+    width:8px;
+    height: 4px;
+}
+#nav_blog>ul{
+    display: none;
+    position: absolute;
+    background: rgba(0, 0, 0, .8);
+    min-width: 100px;
+    top: 70px;
+    left: -12px;
+    padding: 0 12px 15px 12px;
+}
+#nav_blog>ul>li{
+    list-style: none;
+    line-height: 30px;
+}
+#nav_about{
+    font-size: 14px;
+    margin-right: 80px;
+}
+#nav_contact{
+    font-size: 14px;
+}
+#nav_login{
+    font-size: 14px;
+    position: absolute;
+    right: 45px;
+}
+.user_info{
+    position: relative;
+    height: 70px;
+}
+.user_info h4{
+    margin: 0;
+    height: 70px;
+    line-height: 70px;
+    cursor: pointer;
+}
+.user_info h4 img{
+    margin-left: 8px;
+}
+.user_info .drop{
+    display: none;
+    position: absolute;
+    width: 125px;
+    background: rgba(0, 0, 0, .8);
+    left: -12px;
+    padding-left: 12px;
+}
+.user_info .drop p{
+    line-height: 30px;
+}
+/* banner */
+#banner{
+    width: 1280px;
+    height: 426px;
+    background: url("../../public/imgs/banner.jpg") no-repeat center;
+    background-size: 1280px 426px;
+}
+/* 底部 */
+#footer{
+    position: absolute;
+    left: 0;
+    right: 0;
+    background: #333;
+    min-width: 1290px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color:rgba(255,255,255,.4);
+}
+/* 弹窗 */
+#dialog{
+    display: none;
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,.6);
+}
+#dialog_bg{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+#dialog_panel{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 30px;
+    background: #fff;
+    border-radius: 6px;
+}
+#dialog .closeDia{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    background: url(../imgs/close.png) no-repeat center;
+    background-size: 20px;
+    cursor: pointer;
+    transition: transform .2s;
+}
+#dialog .closeDia:hover{
+    transform: rotate(180deg);
+}
+.sign_box{
+    display: none;
+}
+.sign_box label,
+.login_box label{
+    width: 60px;
+}
+.sign_box input,
+.login_box input{
+    width: 200px;
+    padding: 0 12px;
+    outline:none;  
+    border:0;
+    border-bottom: 1px solid #e4e4e4;
+}
+input::-webkit-input-placeholder {
+    color: #ccc;
+}
+form>div{
+    margin: 15px 0;
+}
+.sign_box .btn-info,
+.login_box .btn-info{
+    width: 150px;
+}
+.sign_box .error,
+.login_box .error{
+    color: #d00;
+}
+.tologin,
+.tosign{
+    margin: 15px 0;
+    font-size: 12px;
+}
+.tologin>a,
+.tosign>a{
+    color: #5bc0de;
+}

@@ -1,0 +1,31 @@
+{% extends 'slider.html' %} {% block slider%}
+<link rel="stylesheet" href="/public/css/contentadd.css" />
+<h3>添加博文</h3>
+<form role="form" method="post" onsubmit="return false;">
+    <div class="selecttab">
+        <label for="category">选择分类</label>
+        <ul name="category" id="category">
+            {%for category in categories%}
+            <li value='{{category.id}}'>{{category.name}}</li>
+            {%endfor%}
+            <li class="add_tab">添加分类</li>
+        </ul>
+    </div>
+    <div class="add_title">
+            <label for="title">标题</label>
+            <input type="text" id="title" placeholder="请输入内容标题" name="title">
+        </div>
+    <div class="add_description">
+            <label for="description">博文简介</label>
+            <textarea name="description" id="description" rows="4" placeholder="请输入内容简介" style="resize:none;"></textarea>
+        </div>
+    <div class="edit_content">
+        <label for="content">编辑内容</label>
+        <textarea name="content" id="content" rows="12" placeholder="请输入内容" style="resize:none;"></textarea>
+    </div>
+    <input type="hidden" id="userInfo" value='{{JSON.stringify(userInfo)}}'>
+    <div class="submit text_right"><button type="submit" id="submit">提交</button></div>
+</form>
+{% include 'dialog.html' %}
+<script src="../../public/js/content_add.js"></script>
+{%endblock%}

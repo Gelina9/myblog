@@ -1,0 +1,17 @@
+{% extends 'headFoot.html' %}
+{% block manage%}
+<link rel="stylesheet" href="/public/css/adminslider.css" />
+<div id="main_manage">
+    <div class="slider_left">
+        <ul>
+            <li><a href="/admin/content/add" class="addblog">添加博文</a></li>
+            <li><a href="/admin/content" class="manageblog">博文管理</a></li>
+            <li><a href="/admin/category" class="managetab">分类管理</a></li>
+            <li><a href="/admin/user" class="manageuser">用户管理</a></li>
+        </ul>
+    </div>
+    <div class="slider_right">
+        {%block slider%} {%endblock%}
+    </div>
+</div>
+{%endblock%}

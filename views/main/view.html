@@ -1,0 +1,56 @@
+{%extends 'layout.html'%} 
+{%block content%}
+<link rel="stylesheet" href="../../public/css/view.css">
+<!-- 内容 -->
+<div class="listBox">
+    <h1>{{content.title}}</h1>
+    <p class="author_info">
+        作者：
+        <span class="colInfo">{{content.user.username}}</span>
+        时间：
+        <span class="colInfo">{{content.addTime|date('Y/m/d H:i:s',-8*60)}}</span>
+        阅读：
+        <span class="colInfo">{{content.views}}</span>
+        评论：
+        <span class="colInfo messageCount">{{content.comments.length}}</span>
+    </p>
+    <dfn>
+        <p>{{content.content}}</p>
+    </dfn>
+</div>
+<!-- 评论 -->
+<div class="comment">
+    <div class="comment-header clear-fix">
+        <h3 class="name">评论</h3>
+        <p class="comment-total">一共有<span></span>条评论</span>
+    </div>
+    <div>
+        <div class="input-group">
+            <input type="text" name="content" id="content_detail" placeholder="输入评论内容" class="form-control" />
+            <input type="hidden" id="contentId" value="{{content._id.toString()}}">
+            <div class="input-group-btn">
+                <input type="hidden" value="{{content.id}}" id="contentId">
+                <button id="submitComment" class="submit btn btn-default">评论</button>
+            </div>
+        </div>
+    </div>
+    {% if !userInfo._id%}
+    <div class="login-msg">
+        <span>您还没有登录，请先登录!</span>
+    </div>
+    {% endif %} 
+    {% if content.comments.length == 0 %}
+    <div class="no_msg">
+        还没有留言!
+    </div>
+    {% endif %}
+    <ul class="comment-list">
+    </ul>
+    <ul class="comment_page">
+        <li class="prev_page"></li>
+        <li></li>
+        <li class="next_page"></li>
+    </ul>
+</div>
+<script src="/public/js/view.js"></script>
+{%endblock%}

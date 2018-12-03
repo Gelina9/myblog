@@ -1,0 +1,32 @@
+#nav_blog a{
+    font-size: 24px;
+}
+.admin_name{
+    padding-left: 32px;
+    background: url("../imgs/image.png") no-repeat center left;
+    background-size: 24px;
+    cursor: default !important;
+}
+#banner{
+    margin: 0 auto;
+    width: 1280px;
+    height: 426px;
+    position: relative;
+    background: url("../../public/imgs/banner1.png") no-repeat center;
+    background-size: 1280px 426px;
+}
+#banner>div{
+    position: absolute;
+    top: 234px;
+    left: 45px;
+}
+#banner h1{
+    font-size: 50px;
+    color: #fff;
+    font-weight: 600;
+}
+#banner p{
+    font-size: 40px;
+    color: #fff;
+    font-weight: 500;
+}
